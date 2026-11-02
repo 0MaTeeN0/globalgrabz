@@ -9,6 +9,20 @@ const productCategories = [
   'Toys & Kids Products',
   'Home & Lifestyle Products',
   'Custom Product Sourcing',
+  'Machinery & Equipment',
+  'Beauty & Personal Care',
+  'Sports & Outdoor',
+  'Electronics & Gadgets',
+  'Packaging & Printing',
+  'Furniture & Home Decor',
+  'Jewelry & Accessories',
+  'Bags, Shoes & Luggage',
+  'Health & Medical Supplies',
+  'Industrial & Building Materials',
+  'LED Lighting & Solar',
+  'Pet Supplies',
+  'Office & Stationery',
+  'Gifts & Promotional Items',
 ];
 
 const countryCodes = [
@@ -113,6 +127,8 @@ export default function ContactForm() {
   const headerRef = useScrollReveal<HTMLDivElement>();
   const formRef = useScrollReveal<HTMLDivElement>();
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     fullName: '',
     countryCode: '+92',
@@ -128,9 +144,9 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true); setError(""); try { const res = await fetch("https://api.web3forms.com/submit", { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify({ access_key: "5a223ec2-f595-46e4-baf8-2106365fd43c", subject: "New Quote Request from Global Grabz Website", from_name: "Global Grabz Website", name: formData.fullName, phone: formData.countryCode + " " + formData.phone, email: formData.email, product_category: formData.category, product_details: formData.message }) }); const data = await res.json(); if (!data.success) { throw new Error("failed"); } } catch (err) { setError("Something went wrong. Please try again or contact us on WhatsApp."); setSending(false); return; } setSending(false); setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
       setFormData({
@@ -304,7 +320,7 @@ export default function ContactForm() {
 
               {/* Submit */}
               <button
-                type="submit"
+                type="submit" disabled={sending}
                 className="w-full py-4 bg-[#FF5722] text-white font-semibold text-sm tracking-wide hover:bg-[#E64A19] transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Send size={16} />
@@ -312,7 +328,7 @@ export default function ContactForm() {
               </button>
 
               <p className="text-center text-xs text-black/40">
-                We will respond within 1 hour via WhatsApp
+                {error ? error : "We will respond within 1 hour via WhatsApp"}
               </p>
             </form>
           )}
