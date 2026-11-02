@@ -1,22 +1,20 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import { Gift, CheckCircle } from 'lucide-react';
+import { useState } from 'react'; import SampleModal from './SampleModal'; import { Gift, CheckCircle } from 'lucide-react';
 
 const benefits = [
   'Inspect material quality in person',
   'Verify sizing and specifications',
   'Test product functionality before bulk order',
   'Compare multiple factory samples side by side',
-  'No obligation — sample cost only',
+  'No obligation, sample cost only',
 ];
 
 export default function TryBeforeYouBuy() {
   const sectionRef = useScrollReveal<HTMLElement>();
   const contentRef = useScrollReveal<HTMLDivElement>();
+  const [open, setOpen] = useState(false);
 
-  const handleRequest = () => {
-    const el = document.querySelector('#contact');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
+  const handleRequest = () => { setOpen(true); };
 
   return (
     <section
@@ -110,6 +108,6 @@ export default function TryBeforeYouBuy() {
           </div>
         </div>
       </div>
-    </section>
+      {open && <SampleModal onClose={() => setOpen(false)} />}</section>
   );
 }
