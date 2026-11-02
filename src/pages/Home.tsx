@@ -12,7 +12,7 @@ import ChinaMarket from '../sections/ChinaMarket';
 import CaseStudies from '../sections/CaseStudies';
 import Testimonials from '../sections/Testimonials';
 import ContactForm from '../sections/ContactForm';
-import Footer from '../sections/Footer';
+import FAQ from '../sections/FAQ'; import Footer from '../sections/Footer';
 
 export default function Home() {
   return (
@@ -30,7 +30,7 @@ export default function Home() {
         <ChinaMarket />
         <CaseStudies />
         <Testimonials />
-        <ContactForm />
+        <FAQ /> <ContactForm />
       </main>
       <Footer />
       <WhatsAppFloat />
