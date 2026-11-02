@@ -22,7 +22,7 @@ const productCategories = [
   'LED Lighting & Solar',
   'Pet Supplies',
   'Office & Stationery',
-  'Gifts & Promotional Items',
+  'Gifts & Promotional Items', 'Other',
 ];
 
 const countryCodes = [
