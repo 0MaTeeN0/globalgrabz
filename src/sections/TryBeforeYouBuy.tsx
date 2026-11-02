@@ -6,7 +6,7 @@ const benefits = [
   'Verify sizing and specifications',
   'Test product functionality before bulk order',
   'Compare multiple factory samples side by side',
-  'No obligation, sample cost only',
+  'No obligation, free samples, you only pay logistics',
 ];
 
 export default function TryBeforeYouBuy() {
