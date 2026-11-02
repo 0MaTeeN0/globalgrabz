@@ -7,7 +7,7 @@ const caseStudies = [
     logo: './images/nexureco-logo.png',
     image: './images/case-nexureco.jpg',
     industry: 'Apparel & Clothing',
-    challenge: 'Nexureco needed a reliable partner to source premium streetwear from China — consistent quality, on-time delivery, and competitive pricing for their growing eCommerce brand.',
+    challenge: 'Nexureco needed a reliable partner to source premium streetwear from China, consistent quality, on-time delivery, and competitive pricing for their growing eCommerce brand.',
     solution: 'We identified certified garment factories in Guangdong, conducted on-site quality audits, and established a streamlined production pipeline with weekly QC checks.',
     results: [
       '40% reduction in sourcing costs',
