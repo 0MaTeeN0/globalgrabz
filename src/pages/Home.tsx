@@ -3,7 +3,7 @@ import WhatsAppFloat from '../components/WhatsAppFloat';
 import Services from '../sections/Services';
 import Hero from '../sections/Hero';
 import About from '../sections/About';
-import Categories from '../sections/Categories';
+
 import Process from '../sections/Process';
 import WhyChooseUs from '../sections/WhyChooseUs';
 import TryBeforeYouBuy from '../sections/TryBeforeYouBuy';
@@ -22,7 +22,7 @@ export default function Home() {
         <Hero />
         <About />
         <Services />
-        <Categories />
+        
         <Process />
         <WhyChooseUs />
         <TryBeforeYouBuy />
