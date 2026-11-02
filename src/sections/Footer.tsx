@@ -4,7 +4,7 @@ const quickLinks = [
   { label: 'About Us', href: '#about' },
   { label: 'Product Categories', href: '#categories' },
   { label: 'Our Process', href: '#process' },
-  { label: 'Case Studies', href: '#case-studies' },
+  
   { label: 'Request Quote', href: '#contact' },
 ];
 
