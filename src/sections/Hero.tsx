@@ -24,7 +24,7 @@ export default function Hero() {
           <span className="text-[#FF5722]">to Elite Manufacturing</span>
         </h1>
         <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
-          From factory floor to your doorstep — we handle sourcing, quality control, and global logistics. Direct access to verified Chinese manufacturers.
+          From factory floor to your doorstep, we handle sourcing, quality control, and global logistics. Direct access to verified Chinese manufacturers.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
           <button
