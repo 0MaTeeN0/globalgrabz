@@ -2,20 +2,13 @@ import { Mail, Linkedin, Instagram, MessageCircle, Phone } from 'lucide-react';
 
 const quickLinks = [
   { label: 'About Us', href: '#about' },
-  { label: 'Product Categories', href: '#categories' },
+  
   { label: 'Our Process', href: '#process' },
   
   { label: 'Request Quote', href: '#contact' },
 ];
 
-const categories = [
-  'Apparel & Clothing',
-  'Tech Accessories',
-  'Automobiles & Parts',
-  'Toys & Kids Products',
-  'Home & Lifestyle',
-  'Custom Sourcing',
-];
+
 
 export default function Footer() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -28,7 +21,7 @@ export default function Footer() {
     <footer className="relative w-full bg-black border-t border-white/10">
       {/* Main footer */}
       <div className="w-full px-6 lg:px-12 xl:px-20 py-16 lg:py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
             <img
@@ -90,25 +83,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Categories */}
-          <div>
-            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-6">
-              Categories
-            </h4>
-            <ul className="space-y-3">
-              {categories.map((cat) => (
-                <li key={cat}>
-                  <a
-                    href="#categories"
-                    onClick={(e) => handleNavClick(e, '#categories')}
-                    className="text-sm text-white/60 hover:text-[#FF5722] transition-colors duration-300"
-                  >
-                    {cat}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          
 
           {/* Contact */}
           <div>
