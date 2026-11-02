@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import WhatsAppFloat from '../components/WhatsAppFloat';
+import Services from '../sections/Services';
 import Hero from '../sections/Hero';
 import About from '../sections/About';
 import Categories from '../sections/Categories';
@@ -20,6 +21,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Services />
         <Categories />
         <Process />
         <WhyChooseUs />
