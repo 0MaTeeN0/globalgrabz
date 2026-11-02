@@ -30,7 +30,7 @@ const steps = [
     num: '05',
     icon: Package,
     title: 'Delivery',
-    desc: 'Safe and timely delivery worldwide. Your products arrive ready for sale — inspected, packaged, and compliant.',
+    desc: 'Safe and timely delivery worldwide. Your products arrive ready for sale, inspected, packaged, and compliant.',
   },
 ];
 
