@@ -22,7 +22,7 @@ const highlights = [
   {
     icon: Truck,
     title: 'End-to-End Delivery',
-    desc: 'From factory audit to doorstep delivery — we handle everything.',
+    desc: 'From factory audit to doorstep delivery, we handle everything.',
   },
 ];
 
@@ -74,7 +74,7 @@ export default function About() {
                 From Shanghai to Shenzhen, we're on the ground making sure your products exceed expectations. Our team speaks the language, understands the culture, and works closely with top manufacturers.
               </p>
               <p>
-                Whether you're an eCommerce brand, wholesaler, or startup — we simplify China sourcing so you can focus on growing your business.
+                Whether you're an eCommerce brand, wholesaler, or startup, we simplify China sourcing so you can focus on growing your business.
               </p>
             </div>
           </div>
