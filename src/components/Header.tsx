@@ -7,7 +7,7 @@ const navLinks = [
   { label: 'Categories', href: '#categories' },
   { label: 'Process', href: '#process' },
   { label: 'Markets', href: '#markets' },
-  { label: 'Case Studies', href: '#case-studies' },
+  
   { label: 'Contact', href: '#contact' },
 ];
 
