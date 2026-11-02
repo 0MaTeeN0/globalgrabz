@@ -45,7 +45,7 @@ export default function Factory() {
             Direct From Factory
           </h2>
           <p className="text-white/60 max-w-xl">
-            Real factory relationships. Real production capacity. Real quality control — on the ground in China.
+            Real factory relationships. Real production capacity. Real quality control, on the ground in China.
           </p>
         </div>
 
