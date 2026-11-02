@@ -42,7 +42,7 @@ export default function ChinaMarket() {
             China Markets We Cover
           </h2>
           <p className="text-white/60 max-w-xl">
-            From Shanghai skyscrapers to Yiwu wholesale alleys — our team operates across China's major manufacturing and trading hubs.
+            From Shanghai skyscrapers to Yiwu wholesale alleys, our team operates across China's major manufacturing and trading hubs.
           </p>
         </div>
 
