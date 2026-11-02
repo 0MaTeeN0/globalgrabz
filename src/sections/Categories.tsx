@@ -1,5 +1,5 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import { Shirt, Cpu, Car, Baby, Sofa, Settings } from 'lucide-react';
+import { Shirt, Cpu, Car, Baby, Sofa, Settings, Sparkles, Wrench, Dumbbell, Package, Gem, ShoppingBag } from 'lucide-react';
 
 const categories = [
   {
@@ -38,7 +38,7 @@ const categories = [
     desc: 'Have a unique product? We find manufacturers for any custom specification or design.',
     image: './images/factory-2.jpg',
   },
-];
+{ icon: Sparkles, title: 'Beauty & Personal Care', desc: 'Skincare tools, cosmetics accessories, grooming products, and private label beauty items.', image: './images/market-1.jpg' }, { icon: Wrench, title: 'Machinery & Equipment', desc: 'Industrial machines, tools, and spare parts from experienced manufacturers.', image: './images/factory-real-1.jpg' }, { icon: Dumbbell, title: 'Sports & Outdoor', desc: 'Fitness gear, camping equipment, and outdoor products built for performance.', image: './images/market-3.jpg' }, { icon: Package, title: 'Packaging & Printing', desc: 'Custom boxes, labels, branded packaging, and printed materials at scale.', image: './images/factory-real-2.jpg' }, { icon: Gem, title: 'Jewelry & Accessories', desc: 'Fashion jewelry, watches, and accessories in custom designs and finishes.', image: './images/market-2.jpg' }, { icon: ShoppingBag, title: 'Bags, Shoes & Luggage', desc: 'Handbags, backpacks, footwear, and travel luggage with private label options.', image: './images/market-4.jpg' }, ];
 
 export default function Categories() {
   const headerRef = useScrollReveal<HTMLDivElement>();
