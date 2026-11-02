@@ -29,7 +29,7 @@ export default function ChinaMarket() {
   const gridRef = useScrollReveal<HTMLDivElement>();
 
   return (
-    <section className="relative w-full bg-black py-24 lg:py-32">
+    <section id="markets" className="relative w-full bg-black py-24 lg:py-32">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
       <div className="w-full px-6 lg:px-12 xl:px-20">
