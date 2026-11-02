@@ -20,7 +20,7 @@ const reasons = [
   {
     icon: Layers,
     title: 'End-to-End Service',
-    desc: 'From sourcing to shipping — one partner handles everything. No need to coordinate multiple vendors.',
+    desc: 'From sourcing to shipping, one partner handles everything. No need to coordinate multiple vendors.',
   },
   {
     icon: Network,
@@ -30,7 +30,7 @@ const reasons = [
   {
     icon: Globe,
     title: 'Global Shipping',
-    desc: 'We handle logistics to any destination — air, sea, or express. Full tracking and customs support.',
+    desc: 'We handle logistics to any destination, air, sea, or express. Full tracking and customs support.',
   },
 ];
 
@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
             Why Choose Us
           </h2>
           <p className="text-white/60 max-w-xl mx-auto">
-            We don't just source products — we deliver peace of mind with every shipment.
+            We don't just source products, we deliver peace of mind with every shipment.
           </p>
         </div>
 
