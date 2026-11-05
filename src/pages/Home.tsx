@@ -10,7 +10,7 @@ import TryBeforeYouBuy from '../sections/TryBeforeYouBuy';
 import Factory from '../sections/Factory';
 import ChinaMarket from '../sections/ChinaMarket';
 
-import Testimonials from '../sections/Testimonials';
+
 import ContactForm from '../sections/ContactForm';
 import FAQ from '../sections/FAQ'; import Footer from '../sections/Footer';
 
@@ -29,7 +29,7 @@ export default function Home() {
         <Factory />
         <ChinaMarket />
         
-        <Testimonials />
+        
         <FAQ /> <ContactForm />
       </main>
       <Footer />

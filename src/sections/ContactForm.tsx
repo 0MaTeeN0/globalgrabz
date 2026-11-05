@@ -63,7 +63,7 @@ const countryCodes = [
   { code: '+48', flag: '🇵🇱', country: 'Poland' },
   { code: '+55', flag: '🇧🇷', country: 'Brazil' },
   { code: '+52', flag: '🇲🇽', country: 'Mexico' },
-  { code: '+58', flag: '🇨🇦', country: 'Canada' },
+  { code: '+1', flag: '🇨🇦', country: 'Canada' },
   { code: '+353', flag: '🇮🇪', country: 'Ireland' },
   { code: '+30', flag: '🇬🇷', country: 'Greece' },
   { code: '+351', flag: '🇵🇹', country: 'Portugal' },
@@ -191,6 +191,10 @@ export default function ContactForm() {
           >
             <Phone size={14} />
             +86 130 1899 1840
+          </a>
+          <a href="tel:+971567002406" className="flex items-center gap-2 text-sm text-black/60 hover:text-[#FF5722] transition-colors">
+          <Phone size={14} />
+          +971 56 700 2406
           </a>
           <a
             href="mailto:contact@globalgrabz.com"

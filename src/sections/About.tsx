@@ -2,17 +2,17 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 import { Globe, Shield, Truck } from 'lucide-react';
 
 const stats = [
-  { number: '500+', label: 'Factories Visited' },
-  { number: '50+', label: 'Countries Served' },
-  { number: '10K+', label: 'Products Sourced' },
-  { number: '98%', label: 'Client Satisfaction' },
+  { number: '1 hr', label: 'Quote Response Target' },
+  { number: '4', label: 'China Sourcing Hubs' },
+  { number: '8', label: 'End-to-End Services' },
+  { number: 'Free', label: 'Product Samples' },
 ];
 
 const highlights = [
   {
     icon: Globe,
     title: 'Global Reach',
-    desc: 'Serving clients across 50+ countries with seamless international logistics.',
+    desc: 'Serving buyers in the USA, Europe, Australia, Asia and the Middle East with seamless international logistics.',
   },
   {
     icon: Shield,
