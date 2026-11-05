@@ -17,33 +17,29 @@ export default function Hero() {
 
       {/* Content overlay */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#FF5722] mb-6 animate-fade-in-up">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#E64A19] mb-6 animate-fade-in-up">
           China Sourcing Experts
         </p>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[82px] font-medium text-white leading-[1.1] tracking-tight mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
-          Connecting Global Brands
+          Your Trusted Partner in China
           <br />
-          <span className="text-[#FF5722]">to Elite Manufacturing</span>
+          <span className="text-[#E64A19]">We Source. We Locate. We Deliver.</span>
         </h1>
         <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
-          From factory floor to your doorstep, we handle sourcing, quality control and shipping for buyers in the USA, Europe, Australia, Asia and the Middle East. Direct access to verified Chinese manufacturers.
+          We find verified factories, inspect every order on the ground and deliver right to your door. Trusted by buyers across the USA, Europe, Australia, Asia and the Middle East.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
           <button
             onClick={handleGetQuote}
-            className="px-8 py-4 bg-[#FF5722] text-white font-semibold text-sm tracking-wide hover:bg-[#E64A19] transition-all duration-300 hover:scale-105"
+            className="px-8 py-4 bg-[#E64A19] text-white font-semibold text-sm tracking-wide hover:bg-[#D84315] transition-all duration-300 hover:scale-105"
           >
             Start Sourcing
           </button>
           <a
-            href="#about"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="px-8 py-4 border border-white/30 text-white font-medium text-sm tracking-wide hover:border-[#FF5722] hover:text-[#FF5722] transition-all duration-300"
+            href="/track"
+            className="px-8 py-4 border border-white/30 text-white font-medium text-sm tracking-wide hover:border-[#E64A19] hover:text-[#E64A19] transition-all duration-300"
           >
-            Learn More
+            Track Shipment
           </a>
         </div>
       </div>
