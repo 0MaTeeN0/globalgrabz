@@ -31,3 +31,6 @@ if (a < 0 || b < 0) { console.warn("prerender: markers not found, skipping"); pr
 const root = "<div id=" + Q + "root" + Q + "></div>";
 pages.forEach((p) => { let h = tpl.slice(0, a) + head(p) + tpl.slice(b + 15); h = h.split(root).join("<div id=" + Q + "root" + Q + "><header>" + nav + "</header><main><h1>" + esc(p.h1) + "</h1>" + p.body + "</main></div>"); const dir = path.join(dist, p.path); fs.mkdirSync(dir, { recursive: true }); fs.writeFileSync(path.join(dir, "index.html"), h); });
 console.log("prerender: wrote " + pages.length + " pages");
+const NL = String.fromCharCode(10);
+fs.writeFileSync(path.join(dist, "sitemap.xml"), "<?xml version=" + Q + "1.0" + Q + " encoding=" + Q + "UTF-8" + Q + "?>" + NL + "<urlset xmlns=" + Q + "http://www.sitemaps.org/schemas/sitemap/0.9" + Q + ">" + NL + pages.map((p) => "<url><loc>" + SITE + p.path + "</loc></url>").join(NL) + NL + "</urlset>" + NL);
+console.log("prerender: wrote sitemap.xml");
