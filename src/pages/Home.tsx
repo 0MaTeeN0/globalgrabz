@@ -1,5 +1,5 @@
 import Header from '../components/Header';
-import WhatsAppFloat from '../components/WhatsAppFloat';
+
 import Services from '../sections/Services';
 import Hero from '../sections/Hero';
 import About from '../sections/About';
@@ -33,7 +33,7 @@ export default function Home() {
         <FAQ /> <ContactForm />
       </main>
       <Footer />
-      <WhatsAppFloat />
+      
     </div>
   );
 }
