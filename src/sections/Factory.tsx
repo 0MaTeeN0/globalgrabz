@@ -38,7 +38,7 @@ export default function Factory() {
       <div className="w-full px-6 lg:px-12 xl:px-20">
         {/* Header */}
         <div className="mb-16 lg:mb-20" ref={headerRef}>
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#FF5722] mb-4">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#E64A19] mb-4">
             Manufacturing Power
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-[50px] font-medium text-white leading-[1.2] tracking-tight mb-5">
@@ -58,11 +58,11 @@ export default function Factory() {
                 key={i}
                 className="flex gap-5 group"
               >
-                <div className="shrink-0 w-12 h-12 flex items-center justify-center border border-white/20 text-[#FF5722] group-hover:bg-[#FF5722]/10 group-hover:border-[#FF5722]/30 transition-all duration-500">
+                <div className="shrink-0 w-12 h-12 flex items-center justify-center border border-white/20 text-[#E64A19] group-hover:bg-[#E64A19]/10 group-hover:border-[#E64A19]/30 transition-all duration-500">
                   <cap.icon size={22} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#FF5722] transition-colors">
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#E64A19] transition-colors">
                     {cap.title}
                   </h3>
                   <p className="text-sm text-white/50 leading-relaxed">
@@ -79,7 +79,7 @@ export default function Factory() {
                   e.preventDefault();
                   document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-block px-8 py-4 border border-[#FF5722] text-[#FF5722] font-semibold text-sm tracking-wide hover:bg-[#FF5722] hover:text-white transition-all duration-300"
+                className="inline-block px-8 py-4 border border-[#E64A19] text-[#E64A19] font-semibold text-sm tracking-wide hover:bg-[#E64A19] hover:text-white transition-all duration-300"
               >
                 Discuss Your Project
               </a>
