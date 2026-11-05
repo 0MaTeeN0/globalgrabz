@@ -17,11 +17,8 @@ export default function Hero() {
 
       {/* Content overlay */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#E64A19] mb-6 animate-fade-in-up">
-          China Sourcing Experts
-        </p>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[82px] font-medium text-white leading-[1.1] tracking-tight mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
-          Your Trusted Partner in China
+          China Sourcing Experts
           <br />
           <span className="block mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[54px] text-[#E64A19]">We Source. We Locate. We Deliver.</span>
         </h1>
