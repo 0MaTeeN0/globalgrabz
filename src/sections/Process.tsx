@@ -45,7 +45,7 @@ export default function Process() {
       <div className="w-full px-6 lg:px-12 xl:px-20">
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20" ref={headerRef}>
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#FF5722] mb-4">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#E64A19] mb-4">
             How We Work
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-[50px] font-medium text-white leading-[1.2] tracking-tight mb-5">
@@ -69,17 +69,17 @@ export default function Process() {
               )}
 
               {/* Icon circle */}
-              <div className="relative z-10 shrink-0 w-12 h-12 lg:w-16 lg:h-16 flex items-center justify-center bg-black border border-white/20 group-hover:border-[#FF5722] group-hover:bg-[#FF5722]/10 transition-all duration-500">
-                <step.icon size={20} className="text-white/60 group-hover:text-[#FF5722] transition-colors" />
+              <div className="relative z-10 shrink-0 w-12 h-12 lg:w-16 lg:h-16 flex items-center justify-center bg-black border border-white/20 group-hover:border-[#E64A19] group-hover:bg-[#E64A19]/10 transition-all duration-500">
+                <step.icon size={20} className="text-white/60 group-hover:text-[#E64A19] transition-colors" />
               </div>
 
               {/* Content */}
               <div className="pt-1 lg:pt-2 flex-1">
                 <div className="flex items-center gap-3 mb-2">
-                  <span className="font-display text-sm text-[#FF5722]">
+                  <span className="font-display text-sm text-[#E64A19]">
                     {step.num}
                   </span>
-                  <h3 className="text-xl lg:text-2xl font-semibold text-white group-hover:text-[#FF5722] transition-colors">
+                  <h3 className="text-xl lg:text-2xl font-semibold text-white group-hover:text-[#E64A19] transition-colors">
                     {step.title}
                   </h3>
                 </div>
