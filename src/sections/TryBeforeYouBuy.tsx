@@ -71,16 +71,16 @@ export default function TryBeforeYouBuy() {
               <div className="space-y-4">
                 <div className="h-40 lg:h-48 overflow-hidden">
                   <img
-                    src="./images/factory-real-1.jpg"
-                    alt="Chinese factory production line"
+                    src="./images/cat-tech.jpg"
+                    alt="Electronics product samples ready for testing"
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
                 </div>
                 <div className="h-48 lg:h-56 overflow-hidden">
                   <img
-                    src="./images/market-3.jpg"
-                    alt="Chinese textile wholesale market"
+                    src="./images/factory-3.jpg"
+                    alt="Apparel samples ready for quality check"
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
@@ -89,16 +89,16 @@ export default function TryBeforeYouBuy() {
               <div className="space-y-4 pt-8">
                 <div className="h-48 lg:h-56 overflow-hidden">
                   <img
-                    src="./images/market-1.jpg"
-                    alt="Yiwu wholesale market China"
+                    src="./images/cat-toys.jpg"
+                    alt="Toy and kids product samples"
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
                 </div>
                 <div className="h-40 lg:h-48 overflow-hidden">
                   <img
-                    src="./images/factory-real-2.jpg"
-                    alt="China logistics warehouse"
+                    src="./images/cat-home.jpg"
+                    alt="Home decor product samples"
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
