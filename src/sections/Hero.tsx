@@ -17,10 +17,10 @@ export default function Hero() {
 
       {/* Content overlay */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[82px] font-medium text-white leading-[1.1] tracking-tight mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[68px] font-medium text-white leading-[1.1] tracking-tight mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
           China Sourcing Experts
           <br />
-          <span className="block mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[54px] text-[#E64A19]">We Source. We Locate. We Deliver.</span>
+          <span className="block mt-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[44px] text-[#E64A19]">We Source. We Locate. We Deliver.</span>
         </h1>
         <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
           We find verified factories, inspect every order on the ground and deliver right to your door. Trusted by buyers across the USA, Europe, Australia, Asia and the Middle East.
