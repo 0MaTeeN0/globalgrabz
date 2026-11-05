@@ -7,7 +7,7 @@ const services = rd("services.json");
 const markets = rd("markets.json");
 const hubs = rd("hubs.json");
 const SITE = "https://www.globalgrabz.com";
-const Q = String.fromCharCodeh(34);
+const Q = String.fromCharCode(34);
 const esc = (s) => String(s).split("&").join("&amp;").split("<").join("&lt;").split(">").join("&gt;").split(Q).join("&quot;");
 const meta = (k, v, c) => "<meta " + k + "=" + Q + v + Q + " content=" + Q + esc(c) + Q + " />";
 const ul = (a) => "<ul>" + a.map((x) => "<li>" + esc(x) + "</li>").join("") + "</ul>";
