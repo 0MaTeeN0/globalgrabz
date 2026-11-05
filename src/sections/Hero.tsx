@@ -1,8 +1,8 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 const QuantumSphere = lazy(() => import('../components/QuantumSphere'));
 const showSphere = typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)').matches;
 
-export default function Hero() {
+export default function Hero() { const [sphereOn, setSphereOn] = useState(false); useEffect(() => { if (!showSphere) return; const evs = ['pointermove', 'pointerdown', 'scroll', 'wheel', 'keydown', 'touchstart']; const start = () => { setSphereOn(true); evs.forEach((ev) => window.removeEventListener(ev, start)); }; evs.forEach((ev) => window.addEventListener(ev, start, { passive: true })); return () => evs.forEach((ev) => window.removeEventListener(ev, start)); }, []);
   const handleGetQuote = () => {
     const el = document.querySelector('#contact');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -13,7 +13,7 @@ export default function Hero() {
       id="hero"
       className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black"
     >
-      {showSphere && <Suspense fallback={null}><QuantumSphere /></Suspense>}<div className="absolute inset-0 z-[8] pointer-events-none" style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.6) 45%, rgba(0,0,0,0.2) 100%)' }} />
+      {sphereOn && <Suspense fallback={null}><QuantumSphere /></Suspense>}<div className="absolute inset-0 z-[8] pointer-events-none" style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.6) 45%, rgba(0,0,0,0.2) 100%)' }} />
 
       {/* Content overlay */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
