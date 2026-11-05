@@ -1,0 +1,4 @@
+import { Link } from "react-router";
+import { Shell } from "./Pages";
+import Seo from "../components/Seo";
+export default function Track() { return (<Shell><Seo title="Track Shipment | Global Grabz" description="Track your Global Grabz shipment by air, sea or road. International tracking by airport, seaport and border crossing." path="/track" /><section className="px-6 lg:px-12 xl:px-20 py-16 max-w-3xl"><h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">Track Your Shipment</h1><p className="text-lg text-white/70 mb-8">Our live tracking tool is launching shortly. In the meantime, send your tracking ID to our team and we will reply with the current status.</p><Link to="/contact" className="inline-block px-6 py-3 bg-[#FF5722] text-white font-semibold">Contact Us</Link></section></Shell>); }
