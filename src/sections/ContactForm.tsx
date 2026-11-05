@@ -77,7 +77,6 @@ const countryCodes = [
   { code: '+974', flag: '🇶🇦', country: 'Qatar' },
   { code: '+973', flag: '🇧🇭', country: 'Bahrain' },
   { code: '+968', flag: '🇴🇲', country: 'Oman' },
-  { code: '+961', flag: '🇱🇧', country: 'Lebanon' },
   { code: '+216', flag: '🇹🇳', country: 'Tunisia' },
   { code: '+212', flag: '🇲🇦', country: 'Morocco' },
   { code: '+213', flag: '🇩🇿', country: 'Algeria' },
@@ -120,7 +119,6 @@ const countryCodes = [
   { code: '+211', flag: '🇸🇸', country: 'South Sudan' },
   { code: '+257', flag: '🇧🇮', country: 'Burundi' },
   { code: '+250', flag: '🇷🇼', country: 'Rwanda' },
-  { code: '+256', flag: '🇺🇬', country: 'Uganda' },
 ];
 
 export default function ContactForm() {
