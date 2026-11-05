@@ -1,4 +1,6 @@
-import QuantumSphere from '../components/QuantumSphere';
+import { Suspense, lazy } from 'react';
+const QuantumSphere = lazy(() => import('../components/QuantumSphere'));
+const showSphere = typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)').matches;
 
 export default function Hero() {
   const handleGetQuote = () => {
@@ -11,7 +13,7 @@ export default function Hero() {
       id="hero"
       className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black"
     >
-      <QuantumSphere /><div className="absolute inset-0 z-[8] pointer-events-none" style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.6) 45%, rgba(0,0,0,0.2) 100%)' }} />
+      {showSphere && <Suspense fallback={null}><QuantumSphere /></Suspense>}<div className="absolute inset-0 z-[8] pointer-events-none" style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.6) 45%, rgba(0,0,0,0.2) 100%)' }} />
 
       {/* Content overlay */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
