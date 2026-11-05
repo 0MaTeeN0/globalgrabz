@@ -11,7 +11,7 @@ export default function Hero() {
       id="hero"
       className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black"
     >
-      <QuantumSphere />
+      <QuantumSphere /><div className="absolute inset-0 z-[8] pointer-events-none" style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.6) 45%, rgba(0,0,0,0.2) 100%)' }} />
 
       {/* Content overlay */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
@@ -23,8 +23,8 @@ export default function Hero() {
           <br />
           <span className="text-[#FF5722]">to Elite Manufacturing</span>
         </h1>
-        <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
-          From factory floor to your doorstep, we handle sourcing, quality control, and global logistics. Direct access to verified Chinese manufacturers.
+        <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+          From factory floor to your doorstep, we handle sourcing, quality control and shipping for buyers in the USA, Europe, Australia, Asia and the Middle East. Direct access to verified Chinese manufacturers.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
           <button
