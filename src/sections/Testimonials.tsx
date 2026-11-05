@@ -51,7 +51,7 @@ export default function Testimonials() {
       <div className="w-full px-6 lg:px-12 xl:px-20">
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20" ref={headerRef}>
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#FF5722] mb-4">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#E64A19] mb-4">
             Client Feedback
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-[50px] font-medium text-white leading-[1.2] tracking-tight mb-5">
@@ -75,7 +75,7 @@ export default function Testimonials() {
               {/* Stars */}
               <div className="flex items-center gap-1 mb-5">
                 {Array.from({ length: t.rating }).map((_, j) => (
-                  <Star key={j} size={14} className="text-[#FF5722]" fill="#FF5722" />
+                  <Star key={j} size={14} className="text-[#E64A19]" fill="#E64A19" />
                 ))}
               </div>
 
