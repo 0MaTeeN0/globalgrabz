@@ -18,7 +18,7 @@ export default function TryBeforeYouBuy() {
 
   return (
     <section
-      className="relative w-full bg-[#FF5722] py-20 lg:py-28 overflow-hidden"
+      className="relative w-full bg-[#E64A19] py-20 lg:py-28 overflow-hidden"
       ref={sectionRef}
     >
       {/* Background pattern */}
@@ -59,7 +59,7 @@ export default function TryBeforeYouBuy() {
 
             <button
               onClick={handleRequest}
-              className="px-8 py-4 bg-white text-[#FF5722] font-semibold text-sm tracking-wide hover:bg-black hover:text-white transition-all duration-300"
+              className="px-8 py-4 bg-white text-[#E64A19] font-semibold text-sm tracking-wide hover:bg-black hover:text-white transition-all duration-300"
             >
               Request Free Sample
             </button>
