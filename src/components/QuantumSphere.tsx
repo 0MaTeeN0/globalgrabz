@@ -128,7 +128,7 @@ export default function QuantumSphere() {
 
       composer.render();
     };
-    composer.render(); const startTimer = window.setTimeout(animate, 2500);
+    composer.render(); const startTimer = window.setTimeout(animate, 100);
 
     // Resize handler
     const handleResize = () => {
