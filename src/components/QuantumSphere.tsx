@@ -55,7 +55,7 @@ export default function QuantumSphere() {
     scene.add(sphereGroup);
 
     // Main icosahedron wireframe
-    const clementineColor = new THREE.Color('#FF5722');
+    const clementineColor = new THREE.Color('#E64A19');
     const sphereGeo = new THREE.IcosahedronGeometry(1.8, 24);
     const wireGeo = new THREE.WireframeGeometry(sphereGeo);
     const sphereMat = new THREE.ShaderMaterial({
