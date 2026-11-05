@@ -12,21 +12,21 @@
     --card-foreground: 0 0% 100%;
     --popover: 0 0% 4%;
     --popover-foreground: 0 0% 100%;
-    --primary: 14 100% 57%;
+    --primary: 14 80% 50%;
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 8%;
     --secondary-foreground: 0 0% 100%;
     --muted: 0 0% 12%;
     --muted-foreground: 0 0% 60%;
-    --accent: 14 100% 57%;
+    --accent: 14 80% 50%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 15%;
     --input: 0 0% 15%;
-    --ring: 14 100% 57%;
+    --ring: 14 80% 50%;
     --radius: 0px;
-    --clementine: #FF5722;
+    --clementine: #E64A19;
     --obsidian: #000000;
     --alabaster: #FFFFFF;
     --ash: #999999;
@@ -102,8 +102,8 @@ html.lenis, html.lenis body {
   50% { transform: translateY(-10px); }
 }
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(255, 87, 34, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(255, 87, 34, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(230, 74, 25, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(230, 74, 25, 0.6); }
 }
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
@@ -138,5 +138,5 @@ html.lenis, html.lenis body {
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #FF5722;
+  background: #E64A19;
 }
