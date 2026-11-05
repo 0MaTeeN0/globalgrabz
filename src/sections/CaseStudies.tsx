@@ -57,7 +57,7 @@ export default function CaseStudies() {
       <div className="w-full px-6 lg:px-12 xl:px-20">
         {/* Header */}
         <div className="mb-16 lg:mb-20" ref={headerRef}>
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#FF5722] mb-4">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#E64A19] mb-4">
             Success Stories
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-[50px] font-medium text-white leading-[1.2] tracking-tight mb-5">
@@ -86,7 +86,7 @@ export default function CaseStudies() {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
-                <div className="absolute top-4 left-4 px-3 py-1.5 bg-[#FF5722] text-white text-xs font-medium uppercase tracking-wider">
+                <div className="absolute top-4 left-4 px-3 py-1.5 bg-[#E64A19] text-white text-xs font-medium uppercase tracking-wider">
                   {study.industry}
                 </div>
               </div>
@@ -108,11 +108,11 @@ export default function CaseStudies() {
 
                 <div className="space-y-5">
                   <div>
-                    <p className="text-xs uppercase tracking-[0.15em] text-[#FF5722] mb-2">The Challenge</p>
+                    <p className="text-xs uppercase tracking-[0.15em] text-[#E64A19] mb-2">The Challenge</p>
                     <p className="text-sm text-white/60 leading-relaxed">{study.challenge}</p>
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-[0.15em] text-[#FF5722] mb-2">Our Solution</p>
+                    <p className="text-xs uppercase tracking-[0.15em] text-[#E64A19] mb-2">Our Solution</p>
                     <p className="text-sm text-white/60 leading-relaxed">{study.solution}</p>
                   </div>
 
@@ -129,7 +129,7 @@ export default function CaseStudies() {
                   </div>
 
                   {/* Quote */}
-                  <blockquote className="border-l-2 border-[#FF5722] pl-5 pt-2">
+                  <blockquote className="border-l-2 border-[#E64A19] pl-5 pt-2">
                     <p className="text-sm text-white/70 italic leading-relaxed">
                       "{study.quote}"
                     </p>
