@@ -23,7 +23,7 @@ const images = [
   { src: './images/factory-real-1.jpg', alt: 'Chinese factory production line workers assembling products' },
   { src: './images/factory-real-2.jpg', alt: 'China logistics warehouse with shipping containers' },
   { src: './images/factory-6.jpg', alt: 'Quality control inspection of manufactured products' },
-  { src: './images/factory-5.jpg', alt: 'International shipping port at dawn' },
+  
 ];
 
 export default function Factory() {
