@@ -51,7 +51,7 @@ export default function Categories() {
       <div className="w-full px-6 lg:px-12 xl:px-20">
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20" ref={headerRef}>
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#FF5722] mb-4">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#E64A19] mb-4">
             What We Source
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-[50px] font-medium text-white leading-[1.2] tracking-tight mb-5">
@@ -70,7 +70,7 @@ export default function Categories() {
           {categories.map((cat, i) => (
             <div
               key={i}
-              className="group relative overflow-hidden border border-white/10 hover:border-[#FF5722]/40 transition-all duration-500"
+              className="group relative overflow-hidden border border-white/10 hover:border-[#E64A19]/40 transition-all duration-500"
             >
               {/* Image */}
               <div className="relative h-56 overflow-hidden">
@@ -81,14 +81,14 @@ export default function Categories() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                 {/* Icon */}
-                <div className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FF5722] text-white">
+                <div className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-[#E64A19] text-white">
                   <cat.icon size={18} />
                 </div>
               </div>
 
               {/* Content */}
               <div className="p-6 bg-black">
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#FF5722] transition-colors">
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#E64A19] transition-colors">
                   {cat.title}
                 </h3>
                 <p className="text-sm text-white/50 leading-relaxed">
