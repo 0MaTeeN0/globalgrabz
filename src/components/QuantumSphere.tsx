@@ -25,11 +25,11 @@ export default function QuantumSphere() {
     camera.position.z = 5;
 
     const renderer = new THREE.WebGLRenderer({
-      antialias: true,
+      antialias: false, powerPreference: 'low-power',
       alpha: true,
     });
     renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(1);
     renderer.setClearColor(0x000000, 1);
     renderer.domElement.style.width = '100%';
     renderer.domElement.style.height = '100%';
@@ -42,7 +42,7 @@ export default function QuantumSphere() {
     const renderPass = new RenderPass(scene, camera);
     composer.addPass(renderPass);
     const bloomPass = new UnrealBloomPass(
-      new THREE.Vector2(container.clientWidth, container.clientHeight),
+      new THREE.Vector2(container.clientWidth / 2, container.clientHeight / 2),
       0.4, // bloomStrength
       0.5, // bloomRadius
       0.85 // bloomThreshold
@@ -105,11 +105,11 @@ export default function QuantumSphere() {
     }
 
     // Clock
-    const clock = new THREE.Clock();
+    const clock = new THREE.Clock(); let inView = true; let lastFrame = 0; const io = new IntersectionObserver(([entry]) => { inView = entry.isIntersecting; }); io.observe(container);
 
     // Animation loop
     const animate = () => {
-      frameRef.current = requestAnimationFrame(animate);
+      frameRef.current = requestAnimationFrame(animate); if (!inView) return; const now = performance.now(); if (now - lastFrame < 33) return; lastFrame = now;
       const delta = clock.getDelta();
       const elapsed = clock.getElapsedTime();
 
@@ -128,7 +128,7 @@ export default function QuantumSphere() {
 
       composer.render();
     };
-    animate();
+    composer.render(); const startTimer = window.setTimeout(animate, 2500);
 
     // Resize handler
     const handleResize = () => {
@@ -139,12 +139,12 @@ export default function QuantumSphere() {
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
       composer.setSize(w, h);
-      bloomPass.resolution.set(w, h);
+      bloomPass.resolution.set(w / 2, h / 2);
     };
     window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', handleResize); window.clearTimeout(startTimer); io.disconnect();
       cancelAnimationFrame(frameRef.current);
       renderer.dispose();
       sphereGeo.dispose();
