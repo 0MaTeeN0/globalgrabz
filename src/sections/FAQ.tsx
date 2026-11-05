@@ -23,7 +23,7 @@ export default function FAQ() {
            h('div', { className: 'absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent' }),
            h('div', { className: 'w-full px-6 lg:px-12 xl:px-20' },
              h('div', { className: 'mb-12 lg:mb-16', ref: headerRef },
-               h('p', { className: 'text-xs font-medium uppercase tracking-[0.2em] text-[#FF5722] mb-4' }, 'FAQ'),
+               h('p', { className: 'text-xs font-medium uppercase tracking-[0.2em] text-[#E64A19] mb-4' }, 'FAQ'),
                h('h2', { className: 'text-3xl md:text-4xl lg:text-[50px] font-medium text-white leading-[1.2] tracking-tight mb-5' }, 'Questions About Sourcing From China'),
                h('p', { className: 'text-white/60 max-w-xl' }, 'Straight answers to what importers ask us most before they start.')
                ),
@@ -32,7 +32,7 @@ export default function FAQ() {
                  h('div', { key: i, className: 'border-b border-white/10' },
                    h('button', { type: 'button', onClick: () => setOpen(open === i ? null : i), 'aria-expanded': open === i, className: 'w-full flex items-center justify-between gap-6 py-6 text-left' },
                      h('h3', { className: 'text-lg font-medium text-white' }, f.q),
-                     h(ChevronDown, { size: 20, className: 'shrink-0 text-[#FF5722] transition-transform duration-300 ' + (open === i ? 'rotate-180' : '') })
+                     h(ChevronDown, { size: 20, className: 'shrink-0 text-[#E64A19] transition-transform duration-300 ' + (open === i ? 'rotate-180' : '') })
                      ),
                    open === i ? h('p', { className: 'pb-6 pr-10 text-white/60 leading-relaxed' }, f.a) : null
                    )
