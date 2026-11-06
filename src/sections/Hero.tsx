@@ -1,48 +1,7 @@
-import { Suspense, lazy, useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect, useState, createElement as h } from 'react';
+import HeroVariants from '../components/HeroVariants';
 const QuantumSphere = lazy(() => import('../components/QuantumSphere'));
 const showSphere = typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)').matches;
-
-export default function Hero() { const [sphereOn, setSphereOn] = useState(false); useEffect(() => { if (!showSphere) return; const evs = ['pointermove', 'pointerdown', 'scroll', 'wheel', 'keydown', 'touchstart']; const start = () => { setSphereOn(true); evs.forEach((ev) => window.removeEventListener(ev, start)); }; evs.forEach((ev) => window.addEventListener(ev, start, { passive: true })); return () => evs.forEach((ev) => window.removeEventListener(ev, start)); }, []);
-  const handleGetQuote = () => {
-    const el = document.querySelector('#contact');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  return (
-    <section
-      id="hero"
-      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black"
-    >
-      {sphereOn && <Suspense fallback={null}><QuantumSphere /></Suspense>}<div className="absolute inset-0 z-[8] pointer-events-none" style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.6) 45%, rgba(0,0,0,0.2) 100%)' }} />
-
-      {/* Content overlay */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[68px] font-medium text-white leading-[1.1] tracking-tight mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
-          China Sourcing Experts
-          <br />
-          <span className="block mt-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[44px] text-[#E64A19]">We Source. We Locate. We Deliver.</span>
-        </h1>
-        <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
-          We find verified factories, inspect every order on the ground and deliver right to your door. Trusted by buyers across the USA, Europe, Australia, Asia and the Middle East.
-        </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
-          <button
-            onClick={handleGetQuote}
-            className="px-8 py-4 bg-[#E64A19] text-white font-semibold text-sm tracking-wide hover:bg-[#D84315] transition-all duration-300 hover:scale-105"
-          >
-            Start Sourcing
-          </button>
-          <a
-            href="/track"
-            className="px-8 py-4 border border-white/30 text-white font-medium text-sm tracking-wide hover:border-[#E64A19] hover:text-[#E64A19] transition-all duration-300"
-          >
-            Track Shipment
-          </a>
-        </div>
-      </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
-    </section>
-  );
-}
+const variant = typeof window !== 'undefined' ? Number(new URLSearchParams(window.location.search).get('hero')) || 0 : 0;
+const fade = (d: string) => ({ animationDelay: d, animationFillMode: 'both' as const });
+export default function Hero() { const [sphereOn, setSphereOn] = useState(false); useEffect(() => { if (!showSphere || variant) return; const evs = ['pointermove', 'pointerdown', 'scroll', 'wheel', 'keydown', 'touchstart']; const start = () => { setSphereOn(true); evs.forEach((ev) => window.removeEventListener(ev, start)); }; evs.forEach((ev) => window.addEventListener(ev, start, { passive: true })); return () => evs.forEach((ev) => window.removeEventListener(ev, start)); }, []); const handleGetQuote = () => { const el = document.querySelector('#contact'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }; return h('section', { id: 'hero', className: 'relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black' }, variant ? h(HeroVariants, { v: variant }) : sphereOn ? h(Suspense, { fallback: null }, h(QuantumSphere)) : null, h('div', { className: 'absolute inset-0 z-[8] pointer-events-none', style: { background: variant ? 'radial-gradient(ellipse at center, rgba(15,23,42,0.88) 0%, rgba(15,23,42,0.6) 50%, rgba(15,23,42,0.3) 100%)' : 'radial-gradient(ellipse at center, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.6) 45%, rgba(0,0,0,0.2) 100%)' } }), h('div', { className: 'relative z-10 text-center px-6 max-w-5xl mx-auto' }, h('h1', { className: 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[68px] font-medium text-white leading-[1.1] tracking-tight mb-6 animate-fade-in-up', style: fade('0.2s') }, 'China Sourcing Experts', h('br'), h('span', { className: 'block mt-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[44px] text-[#E64A19]' }, 'We Source. We Locate. We Deliver.')), h('p', { className: 'text-base md:text-lg text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up', style: fade('0.4s') }, 'We find verified factories, inspect every order on the ground and deliver right to your door. Trusted by buyers across the USA, Europe, Australia, Asia and the Middle East.'), h('div', { className: 'flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up', style: fade('0.6s') }, h('button', { onClick: handleGetQuote, className: 'px-8 py-4 bg-[#E64A19] text-white font-semibold text-sm tracking-wide hover:bg-[#D84315] transition-all duration-300 hover:scale-105' }, 'Start Sourcing'), h('a', { href: '/track', className: 'px-8 py-4 border border-white/30 text-white font-medium text-sm tracking-wide hover:border-[#E64A19] hover:text-[#E64A19] transition-all duration-300' }, 'Track Shipment'))), h('div', { className: 'absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none' })); }
