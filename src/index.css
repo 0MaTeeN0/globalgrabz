@@ -145,7 +145,7 @@ html.lenis, html.lenis body {
 /* ===== LIGHT THEME: light content sections, navy header/hero/footer ===== */
 body { background-color: #FFFFFF; color: #0F172A; }
 header .bg-black\/90, header .bg-black\/95 { background-color: rgba(15, 23, 42, 0.95); }
-#hero.bg-black, footer.bg-black { background-color: #0F172A; }
+#hero.bg-black { background-color: #0F172A; } /* footer stays pure black */
 #hero .from-black { --tw-gradient-from: #0F172A var(--tw-gradient-from-position); --tw-gradient-to: rgb(15 23 42 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
 .from-black:where(:not(header *, #hero *, footer *)) { --tw-gradient-from: #FFFFFF var(--tw-gradient-from-position); --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
 .bg-black:where(:not(header, header *, #hero, #hero *, footer, footer *)), .bg-\[\#0A0A0A\]:where(:not(header *, #hero *, footer *)), .bg-\[\#111\]:where(:not(header *, #hero *, footer *)), .bg-\[\#111111\]:where(:not(header *, #hero *, footer *)), .bg-neutral-900:where(:not(header *, #hero *, footer *)), .bg-zinc-900:where(:not(header *, #hero *, footer *)), .bg-gray-900:where(:not(header *, #hero *, footer *)) { background-color: #FFFFFF; }
