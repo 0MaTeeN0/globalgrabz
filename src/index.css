@@ -140,3 +140,28 @@ html.lenis, html.lenis body {
 ::-webkit-scrollbar-thumb:hover {
   background: #E64A19;
 }
+
+
+/* ===== LIGHT THEME: light content sections, navy header/hero/footer ===== */
+body { background-color: #FFFFFF; color: #0F172A; }
+header .bg-black\/90, header .bg-black\/95 { background-color: rgba(15, 23, 42, 0.95); }
+#hero.bg-black, footer.bg-black { background-color: #0F172A; }
+#hero .from-black { --tw-gradient-from: #0F172A var(--tw-gradient-from-position); --tw-gradient-to: rgb(15 23 42 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.from-black:where(:not(header *, #hero *, footer *)) { --tw-gradient-from: #FFFFFF var(--tw-gradient-from-position); --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.bg-black:where(:not(header, header *, #hero, #hero *, footer, footer *)), .bg-\[\#0A0A0A\]:where(:not(header *, #hero *, footer *)), .bg-\[\#111\]:where(:not(header *, #hero *, footer *)), .bg-\[\#111111\]:where(:not(header *, #hero *, footer *)), .bg-neutral-900:where(:not(header *, #hero *, footer *)), .bg-zinc-900:where(:not(header *, #hero *, footer *)), .bg-gray-900:where(:not(header *, #hero *, footer *)) { background-color: #FFFFFF; }
+section.bg-black:nth-of-type(even):where(:not(#hero, footer *)) { background-color: #F7F8FA; }
+.bg-white\/5:where(:not(header *, #hero *, footer *)), .bg-white\/\[0\.02\]:where(:not(header *, #hero *, footer *)), .bg-white\/\[0\.03\]:where(:not(header *, #hero *, footer *)) { background-color: #FFFFFF; box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04); }
+.bg-white\/10:where(:not(header *, #hero *, footer *)) { background-color: #F1F5F9; }
+.hover\:bg-white\/5:hover:where(:not(header *, #hero *, footer *)), .hover\:bg-white\/10:hover:where(:not(header *, #hero *, footer *)) { background-color: #F1F5F9; }
+.text-white:where(:not(header *, #hero *, footer *)) { color: #0F172A; }
+.text-white\/90:where(:not(header *, #hero *, footer *)), .text-white\/80:where(:not(header *, #hero *, footer *)) { color: #334155; }
+.text-white\/70:where(:not(header *, #hero *, footer *)), .text-white\/60:where(:not(header *, #hero *, footer *)), .text-white\/50:where(:not(header *, #hero *, footer *)), .text-gray-300:where(:not(header *, #hero *, footer *)), .text-gray-400:where(:not(header *, #hero *, footer *)) { color: #475569; }
+.text-white\/40:where(:not(header *, #hero *, footer *)), .text-white\/30:where(:not(header *, #hero *, footer *)), .text-gray-500:where(:not(header *, #hero *, footer *)) { color: #64748B; }
+.bg-\[\#E64A19\].text-white, .bg-\[\#E64A19\] .text-white, .bg-\[\#D84315\].text-white, .bg-clementine.text-white { color: #FFFFFF; }
+.border-white\/5:where(:not(header *, #hero *, footer *)), .border-white\/10:where(:not(header *, #hero *, footer *)) { border-color: #E5E7EB; }
+.border-white\/20:where(:not(header *, #hero *, footer *)), .border-white\/30:where(:not(header *, #hero *, footer *)) { border-color: #CBD5E1; }
+.divide-white\/10:where(:not(header *, #hero *, footer *)) > :not([hidden]) ~ :not([hidden]) { border-color: #E5E7EB; }
+.placeholder\:text-white\/40:where(:not(header *, #hero *, footer *))::placeholder, .placeholder\:text-white\/30:where(:not(header *, #hero *, footer *))::placeholder { color: #94A3B8; }
+.glass-panel:where(:not(header *, #hero *, footer *)), .glass-dark:where(:not(header *, #hero *, footer *)) { background: rgba(255, 255, 255, 0.85); border-color: #E5E7EB; }
+::-webkit-scrollbar-track { background: #F1F5F9; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; }
